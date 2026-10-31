@@ -41,6 +41,8 @@
  'إيقاف الحركة Ⅱ':'Pause animations Ⅱ','تشغيل الحركة ▷':'Play animations ▷','فتح القائمة':'Open menu','إغلاق القائمة':'Close menu','إغلاق تفاصيل المشروع':'Close project details','العودة إلى بداية الصفحة':'Back to the top','التنقل الرئيسي':'Main navigation','تصفية المشاريع':'Filter projects','مروج الزهراني، الرئيسية':'Murooj Alzahrani, home','راسليني عبر البريد الإلكتروني':'Send me an email',
  'ذكاء اصطناعي · تحليل محتوى متعدد الوسائط':'AI · Multimedia content analysis','تطوير ويب · تسعير الخدمات التقنية':'Web development · Technical service pricing','منصة ويب · رعاية الحيوانات الأليفة':'Web platform · Pet care','تطوير ألعاب · JavaFX':'Game development · JavaFX','موقع تعليمي · التوعية بالنباتات':'Educational website · Plant awareness','رسوم متحركة · C++':'Animation · C++','ذكاء اصطناعي · Roboflow · رؤية حاسوبية':'AI · Roboflow · Computer vision'
  };
+ // SVG icons are separate from translated labels; support the same labels without arrow glyphs.
+ for(const [ar,en]of Object.entries(translations)){const cleanAr=ar.replace(/[↗↖↙↑↓]/g,'').trim(),cleanEn=en.replace(/[↗↖↙↑↓]/g,'').trim();if(cleanAr!==ar)translations[cleanAr]=cleanEn;}
  const reverse=Object.fromEntries(Object.entries(translations).map(([ar,en])=>[en,ar]));
  const textOrigins=new WeakMap(),attributeOrigins=new WeakMap();
  const toggle=document.querySelector('#language-toggle');let language='ar',initialized=false;
