@@ -1,11 +1,9 @@
 (() => {
  const root=document.documentElement, reduced=matchMedia('(prefers-reduced-motion: reduce)'),fine=matchMedia('(hover: hover) and (pointer: fine)');
- const button=document.createElement('button');button.className='motion-toggle';button.type='button';button.setAttribute('aria-pressed','false');button.textContent='إيقاف الحركة Ⅱ';
- const footer=document.querySelector('footer'),container=document.createElement('div');container.className='footer-actions';container.append(button,footer.lastElementChild);footer.append(container);
- let manualOff=false;try{manualOff=localStorage.getItem('murooj-motion')==='off'}catch{}
- const enabled=()=>!manualOff&&!reduced.matches;
- function sync(){root.dataset.motion=enabled()?'on':'off';button.textContent=enabled()?'إيقاف الحركة Ⅱ':'تشغيل الحركة ▷';button.setAttribute('aria-pressed',String(!enabled()));if(!enabled()){root.classList.remove('pointer-ready');root.style.removeProperty('--visual-x');root.style.removeProperty('--visual-y')}}
- button.addEventListener('click',()=>{manualOff=!manualOff;try{localStorage.setItem('murooj-motion',manualOff?'off':'on')}catch{}sync()});reduced.addEventListener('change',sync);sync();
+ const footer=document.querySelector('footer'),container=document.createElement('div');container.className='footer-actions';container.append(footer.lastElementChild);footer.append(container);
+ const enabled=()=>!reduced.matches;
+ function sync(){root.dataset.motion=enabled()?'on':'off';if(!enabled()){root.classList.remove('pointer-ready');root.style.removeProperty('--visual-x');root.style.removeProperty('--visual-y')}}
+ reduced.addEventListener('change',sync);sync();
  document.querySelectorAll('.practice-list article,.skill-row,.course-row,.tech-tags span').forEach((el,i)=>el.style.setProperty('--reveal-delay',`${i%3*80}ms`));
  const visual=document.querySelector('.identity-visual'),hero=document.querySelector('.hero'),journey=document.querySelector('.timeline'),arts=[...document.querySelectorAll('.project-art')];
  let pointerFrame=0,clientX=0,clientY=0;
