@@ -1,0 +1,116 @@
+
+.project-art.project-card{height:auto;min-height:410px;padding:65px 30px 28px;display:flex;flex-direction:column;gap:20px}
+.project-card .project-logo-wrap{position:relative;inset:auto;height:220px;flex:none;margin:0 20px;z-index:1}
+.project-card .project-logo{max-height:220px;max-width:100%}
+.project-card .project-info{position:relative;z-index:5;padding:22px 0 0;gap:25px;align-items:flex-end;border-top:1px solid #ffffff30}
+.project-card .project-info>div{max-width:none;flex:1;min-width:0}
+.project-card .project-info p{color:#f0f6f7;max-width:none;font-size:17px;line-height:1.9}
+.project-card .project-info h3{color:#fff}
+.project-card .project-year{color:#dbe6eb!important;font-size:14px!important}
+.project-card .detail-button{width:auto;height:auto;min-height:48px;min-width:150px;display:flex;align-items:center;justify-content:center;gap:16px;border-radius:6px;padding:10px 16px;margin:0;background:#10242be6;border-color:#a9d5dc;color:#fff;flex-shrink:0}
+.project-card .detail-button>span{position:static;clip:auto;height:auto;width:auto;overflow:visible;font:500 16px 'Tajawal',sans-serif}
+.project-card .detail-button:hover{transform:none;rotate:none;background:#ffe180;color:#172228}
+.project-stack{padding:20px 0 0}.stack-label{font-size:14px;color:var(--muted)}
+.project-stack .project-technologies{margin:10px 0 0;gap:8px}
+.project-stack .project-technologies li{color:#d2e3e8;background:#ffffff06;border-color:#54727e;font-size:13px;padding:5px 12px}
+.project-card.khadraa .detection-scene{position:relative;height:220px;inset:auto;flex:none}
+#project-dialog:has(.demo-player){max-width:920px}
+.project-demos button{font:700 16px 'Tajawal',sans-serif;min-height:46px;padding:10px 18px;border-radius:6px;border:1px solid #e5f580;background:#e5f580;color:#152021}
+.project-demos button[aria-pressed=true]{background:#182e36;color:#e5f580}
+.demo-player{width:100%;aspect-ratio:16/9;background:#091216;border:1px solid #54727e;border-radius:8px;overflow:hidden;margin-top:18px}
+.demo-player iframe{display:block;width:100%;height:100%;border:0}
+@media(max-width:760px){
+ .project-art.project-card{padding:50px 20px 22px;gap:15px;min-height:0}
+ .project-card .project-logo-wrap{height:180px;margin:0 10px}.project-card .project-logo{max-height:180px}
+ .project-card .project-info{display:flex;flex-direction:column;align-items:stretch;gap:18px;padding-top:18px}
+ .project-card .project-info p{font-size:16px;line-height:1.9}.project-card .project-info h3{font-size:25px}
+ .project-card .detail-button{width:100%;margin:0}.project-stack .project-technologies li{font-size:12px;padding:4px 10px}
+ .project-card.khadraa .detection-scene{height:180px}
+ #project-dialog:has(.demo-player){padding-inline:16px}.demo-player{aspect-ratio:4/3}
+}
+
+/* Restore the original card dimensions; controls sit below the surface. */
+.project-art.project-card{height:370px;min-height:0;padding:0;display:block}
+.project-card .project-logo-wrap{position:absolute;inset:48px 45px auto;height:165px;margin:0}
+.project-card .project-logo{max-height:165px}
+.project-card .project-info{position:absolute;inset:auto 28px 22px;padding:0;border:0;display:block}
+.project-card .project-info h3{font-size:28px;line-height:1.5;margin:0 0 7px}
+.project-card .project-info p{font-size:17px;line-height:1.7;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.project-card .project-info .project-year{font-size:14px!important;line-height:1.4;margin:0 0 4px}
+.project-card.khadraa .detection-scene{position:absolute;inset:55px 25% auto;height:150px}
+.project-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding-top:18px}
+.project-actions button{font:500 16px 'Tajawal',sans-serif;position:static;display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:46px;height:auto;width:auto;margin:0;padding:10px 18px;border-radius:6px;background:transparent;border:1px solid #7598a5;color:#e9f3f5;rotate:none;transform:none}
+.project-actions .detail-button>span{position:static;clip:auto;width:auto;height:auto;overflow:visible;font:inherit}
+.project-actions .inline-demo-button{background:#e5f580;color:#172228;border-color:#e5f580}
+.project-actions .inline-demo-button[aria-pressed=true]{background:#243b43;color:#e5f580}
+.project-actions button:hover{background:#38515a;color:#fff;rotate:none;transform:none}
+.project-actions button[hidden]{display:none}
+.project-card.is-playing{background:#071116;transform:none!important}
+.project-card.is-playing>*:not(.card-demo-player){visibility:hidden}
+.project-card.is-playing:after{display:none}
+.card-demo-player{position:absolute;inset:0;display:block;width:100%;height:100%;border:0;z-index:10;background:#071116}
+@media(min-width:761px) and (max-width:1100px){.project-art.project-card{height:310px}.project-card .project-logo-wrap{height:125px}.project-card .project-logo{max-height:125px}.project-card .project-info{bottom:18px}}
+@media(max-width:760px){
+ .project-art.project-card{height:clamp(220px,65vw,285px);padding:0;min-height:0}
+ .project-card .project-logo-wrap{inset:34px 25px auto;height:90px}.project-card .project-logo{max-height:90px}
+ .project-card .project-info{inset:auto 18px 14px;display:block;padding:0}
+ .project-card .project-info h3{font-size:24px;line-height:1.4;margin:0 0 4px}
+ .project-card .project-info p{font-size:16px;line-height:1.5;-webkit-line-clamp:2}
+ .project-card .project-info .project-year{font-size:12px!important;margin-bottom:2px}
+ .project-card.khadraa .detection-scene{inset:35px 23% auto;height:75px}
+ .project-actions{gap:8px;padding-top:14px}.project-actions button{font-size:15px;padding:9px 12px;min-height:44px;flex:1 1 auto}
+}
+
+/* Larger original logos, with a warm light surface behind Kanaf's violet mark. */
+.project-card .project-logo-wrap{top:38px;height:195px}
+.project-card .project-logo{max-height:195px}
+.project-card.kanaf{background:linear-gradient(135deg,#f6ecd9,#e9dfc9);color:#343044}
+.project-card.kanaf .art-grid{opacity:.16}
+.project-card.kanaf .art-top{color:#514064}
+.project-card.kanaf .project-info h3,.project-card.kanaf .project-info p{color:#343044}
+.project-card.kanaf .project-info .project-year{color:#665a70!important}
+.project-card.khadraa .project-logo-wrap{background:#e9eee5;border-radius:12px;width:240px;max-width:70%;inset-inline:0;margin-inline:auto;padding:8px}
+@media(min-width:761px) and (max-width:1100px){.project-card .project-logo-wrap{top:35px;height:145px}.project-card .project-logo{max-height:145px}.project-card.khadraa .project-logo-wrap{width:200px}}
+@media(max-width:760px){
+ .project-card .project-logo-wrap{top:30px;height:108px}.project-card .project-logo{max-height:108px}
+ .project-card .project-info>div{display:grid;grid-template-columns:1fr auto;column-gap:10px;align-items:baseline}
+ .project-card .project-info h3{grid-column:1;grid-row:1}
+ .project-card .project-info .project-year{grid-column:2;grid-row:1}
+ .project-card .project-info p:not(.project-year){grid-column:1 / -1}
+ .project-card.khadraa .project-logo-wrap{width:155px;border-radius:8px;padding:5px}
+}
+@media(max-width:380px){.project-card .project-logo-wrap{top:26px;height:96px}.project-card .project-logo{max-height:96px}}
+@media(min-width:1101px){.project-card .project-logo-wrap{top:35px;height:180px}.project-card .project-logo{max-height:180px}}
+@media(min-width:761px) and (max-width:1100px){.project-card .project-logo-wrap{top:24px;height:135px}.project-card .project-logo{max-height:135px}}
+@media(min-width:1101px){.project-card .project-logo-wrap{top:28px}}
+html .project-card .project-info p{line-height:1.7}
+@media(max-width:760px){.project-card .project-logo-wrap{top:22px}html .project-card .project-info p{line-height:1.5}html .project-card .project-info h3{line-height:1.4}}
+
+/* Lighter original blue for Kanaf; retain the unmodified transparent logos. */
+.project-card.kanaf{background:linear-gradient(125deg,#93cedd,#b5dce6 60%,#8fc5d5);color:#173d4b}
+.project-card.kanaf .art-top,.project-card.kanaf .project-info h3,.project-card.kanaf .project-info p{color:#173d4b}
+.project-card.kanaf .project-info .project-year{color:#355c69!important}
+.project-card.kanaf .project-logo-wrap{overflow:hidden}
+.project-card.kanaf .project-logo{transform:scale(1.5);flex-shrink:0}
+.project-card.khadraa .project-logo-wrap{background:transparent;border-radius:0;padding:0}
+/* Visible blueprint grids and a golden surface for Khadraa. */
+.project-card.kanaf .art-grid{opacity:1;color:#21596b;background-image:linear-gradient(#21596b20 1px,transparent 1px),linear-gradient(90deg,#21596b20 1px,transparent 1px);mask-image:none;-webkit-mask-image:none}
+.project-card.khadraa{background:radial-gradient(ellipse at 85% 25%,#fff0ad90,transparent 65%),linear-gradient(125deg,#d9aa37,#f0cd68 58%,#ffe5a0);color:#45381a}
+.project-card.khadraa .art-top,.project-card.khadraa .project-info h3,.project-card.khadraa .project-info p{color:#45381a}
+.project-card.khadraa .project-info .project-year{color:#665123!important}
+.project-card.khadraa .art-grid{color:#705112;opacity:1;mask-image:none;-webkit-mask-image:none;background-image:linear-gradient(#70511216 1px,transparent 1px),linear-gradient(90deg,#70511216 1px,transparent 1px)}
+
+#project-dialog:has(.khadraa-gallery){max-width:1100px}
+.khadraa-gallery{margin-top:28px;border-top:1px solid var(--line);padding-top:18px}
+.khadraa-gallery h3{font-size:22px;color:var(--teal)}
+.khadraa-gallery figure{margin:0}
+.gallery-preview{display:block;width:100%;border:1px solid #54727e;border-radius:8px;padding:0;background:#0c191f;overflow:hidden;cursor:zoom-in}
+.gallery-preview img{display:block;width:100%;height:auto;max-height:440px;object-fit:contain}
+.khadraa-gallery.is-zoomed .gallery-preview{cursor:zoom-out}
+.khadraa-gallery.is-zoomed .gallery-preview img{max-height:none}
+.khadraa-gallery figcaption{font-size:15px;color:var(--muted);margin-top:10px}
+.gallery-thumbnails{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:16px}
+.gallery-thumbnails button{min-height:44px;border:2px solid transparent;border-radius:6px;padding:3px;background:#11232b;overflow:hidden}
+.gallery-thumbnails button[aria-pressed=true]{border-color:var(--amber)}
+.gallery-thumbnails img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover}
+@media(max-width:760px){.gallery-thumbnails{gap:5px}.gallery-preview img{max-height:280px}.khadraa-gallery h3{font-size:20px}.khadraa-gallery figcaption{font-size:14px}}

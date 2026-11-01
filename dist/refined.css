@@ -4,3 +4,19 @@
 @media(max-width:380px){.hero h1{font-size:17vw}.brand-name{font-size:16px}.hero-copy>.hero-role{font-size:16px}.hero-actions .button{font-size:15px;gap:10px;padding-inline:12px}.resume-link{font-size:14px}.identity-visual{height:330px}.identity-letter{font-size:140px}.identity-tag small{font-size:10px}.identity-tag{font-size:17px;padding:8px 9px}.works-heading h2{font-size:36px}}
 html[data-motion=off] *,html[data-motion=off] *:before,html[data-motion=off] *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}html[data-motion=off] .reveal{opacity:1!important;transform:none!important;filter:none!important}html[data-motion=off] .pointer-aura{display:none}html[data-motion=off] .identity-visual,html[data-motion=off] .project-art{transform:none!important}html[data-motion=off] .magnetic{translate:none}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.js-motion .reveal{opacity:1;transform:none;filter:none}.pointer-aura{display:none}.identity-visual,.project-art{transform:none!important}.magnetic{translate:none}}
+
+/* Project metadata and demo resources. */
+.project-year{font-variant-numeric:tabular-nums;color:var(--muted,#aab9bd);font-size:.85rem;margin:.5rem 0}
+#dialog-resources{border-top:1px solid #ffffff24;margin-top:1.5rem;padding-top:1rem}
+#dialog-resources h4{margin:.75rem 0;font-size:1rem}
+.project-technologies{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0!important;margin:.75rem 0 1.25rem}
+.project-technologies li{border:1px solid #ffffff30;border-radius:999px;padding:.25rem .65rem;font-size:.8rem;overflow-wrap:anywhere}
+.project-demos{display:flex;flex-wrap:wrap;gap:.75rem}
+.project-demos a{display:inline-flex;justify-content:center;align-items:center;min-height:44px;padding:.6rem 1rem;background:#e5f580;color:#152021;border-radius:6px;font-weight:700;text-decoration:none}
+.project-demos a:hover{background:#f0ffa5}.project-demos a:focus-visible{outline:3px solid #fff;outline-offset:4px}
+
+/* Original project logos from the owner's portfolio. */
+.project-logo-wrap{position:absolute;inset:60px 64px 65px;display:flex;align-items:center;justify-content:center;z-index:1}
+.project-logo{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;border-radius:12px}
+.has-project-logo .scan-tag{display:none}
+@media(max-width:760px){.project-logo-wrap{inset:48px 35px 54px}.project-logo{border-radius:8px}}
